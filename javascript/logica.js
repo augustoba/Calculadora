@@ -19,7 +19,6 @@ var numero1;
 var numero2;
 var operacion;
 
-
 uno.onclick = function (aux) {
   resultado.textContent = resultado.textContent + "1";
 }
@@ -57,60 +56,70 @@ reset.onclick = function (aux) {
 }
 
 mas.onclick = function (aux) {
-  if (numero1 < 8){
+  
     numero1 = resultado.textContent;
-    operacion = "+";
-    limpiar();
+    console.log(numero1)
+    if (numero1.length > 7){
+      resultado.textContent="error";
+      console.log(numero1);
   }
   else{
-    resultado.textContent="error debe ingresar menos de 8 digitos";
+    operacion = "+";
+    
+    limpiar();
+    
   }
 }
 
 menos.onclick = function (aux) {
-  if (numero1 < 8){
-    numero1 = resultado.textContent;
-    operacion = "-";
+  numero1 = resultado.textContent;
+  console.log(numero1)
+    if (numero1.length < 7){
+       operacion = "-";
     limpiar();
   }
   else{
-    resultado.textContent="error debe ingresar menos de 8 digitos";
+    resultado.textContent="error  ";
     }
 }
 
 por.onclick = function (aux) {
-  if (numero1 < 8){
-    numero1 = resultado.textContent;
+  numero1 = resultado.textContent;
+  if (numero1.length < 7){
     operacion = "*";
     limpiar();
   }
   else{
-    resultado.textContent="error debe ingresar menos de 8 digitos";
+    resultado.textContent="error ";
   }
 }
 
 dividido.onclick = function (aux) {
-  if (numero1 < 8){
-    numero1 = resultado.textContent;
+
+  numero1 = resultado.textContent;
+  if (numero1.length < 7){
     operacion = "/";
     limpiar();
   }
   else{
-    resultado.textContent="error debe ingresar menos de 8 digitos";
+    resultado.textContent="error div";
   }
 }
 
 igual.onclick = function (aux) {
-  if (numero1 < 8){
-    numero2 = resultado.textContent;
-    
+  numero2 = resultado.textContent;
+  console.log(numero2)
+  if (numero2.length < 7){
+    console.log(numero2)
+       
     resolver();
   }
   else{
-    resultado.textContent="error debe ingresar menos de 8 digitos";
+    resultado.textContent="error  ";
   }
-    
-}
+     
+  }
+ 
 
 function limpiar() {
     resultado.textContent = "";
@@ -128,6 +137,7 @@ function resolver() {
   switch (operacion) {
     case "+":
       res = parseFloat(numero1) + parseFloat(numero2);
+      console.log(res);
       break;
     case "-":
       res = parseFloat(numero1) - parseFloat(numero2);
