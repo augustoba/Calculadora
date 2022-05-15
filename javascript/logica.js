@@ -57,32 +57,59 @@ reset.onclick = function (aux) {
 }
 
 mas.onclick = function (aux) {
-  numero1 = resultado.textContent;
-  operacion = "+";
-  limpiar();
+  if (numero1 < 8){
+    numero1 = resultado.textContent;
+    operacion = "+";
+    limpiar();
+  }
+  else{
+    resultado.textContent="error debe ingresar menos de 8 digitos";
+  }
 }
 
 menos.onclick = function (aux) {
-  numero1 = resultado.textContent;
-  operacion = "-";
-  limpiar();
+  if (numero1 < 8){
+    numero1 = resultado.textContent;
+    operacion = "-";
+    limpiar();
+  }
+  else{
+    resultado.textContent="error debe ingresar menos de 8 digitos";
+    }
 }
 
 por.onclick = function (aux) {
-  numero1 = resultado.textContent;
-  operacion = "*";
-  limpiar();
+  if (numero1 < 8){
+    numero1 = resultado.textContent;
+    operacion = "*";
+    limpiar();
+  }
+  else{
+    resultado.textContent="error debe ingresar menos de 8 digitos";
+  }
 }
 
 dividido.onclick = function (aux) {
-  numero1 = resultado.textContent;
-  operacion = "/";
-  limpiar();
+  if (numero1 < 8){
+    numero1 = resultado.textContent;
+    operacion = "/";
+    limpiar();
+  }
+  else{
+    resultado.textContent="error debe ingresar menos de 8 digitos";
+  }
 }
 
 igual.onclick = function (aux) {
-  numero2 = resultado.textContent;
-  resolver();
+  if (numero1 < 8){
+    numero2 = resultado.textContent;
+    
+    resolver();
+  }
+  else{
+    resultado.textContent="error debe ingresar menos de 8 digitos";
+  }
+    
 }
 
 function limpiar() {
